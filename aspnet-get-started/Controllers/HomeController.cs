@@ -7,8 +7,10 @@ using System.Web.Mvc;
 namespace aspnet_get_started.Controllers
 {
     public class HomeController : Controller
+    {
+        Public ActionResult Index()
         {
-             return View();
+            return View();
         }
 
         public ActionResult About()

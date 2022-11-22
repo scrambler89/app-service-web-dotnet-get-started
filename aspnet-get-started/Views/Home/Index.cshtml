@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ReadJSONusingCsharp.Models.JSONModel.Rootobject
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -13,6 +14,11 @@
         <h2>Customers</h2>
         <p>Follow the link to Happy Customers of People's Solutions</p>
         <p><a class="btn btn-default" href="https://reqres.in/api/users">Learn more &raquo;</a></p>
+        <p>first_name : @Model.first_name</p>
+        <p>email : @Model.email</p>
+        <p>id : @Model.id</p>
+
     </div>
     
 </div>
+

@@ -10,8 +10,8 @@ namespace aspnet_get_started.Controllers
     {
         public ActionResult Index()
         {
-            var json = "{\"id\": \"7\",\"email\": \"michael.lawson@reqres.in\",\"first_name\": \"Michael\",\"last_name\": \"Lawson\",
-            \"avatar\": \"https://reqres.in/img/faces/7-image.jpg\"}"
+            var json = "{"id": "7","email": "michael.lawson@reqres.in","first_name": "Michael","last_name": "Lawson",
+            "avatar": "https://reqres.in/img/faces/7-image.jpg"}"
             JSONModel.Rootobject records = JsonConvert.DeserializeObject<JSONModel.Rootobject>(json); 
             return View(records);
         }

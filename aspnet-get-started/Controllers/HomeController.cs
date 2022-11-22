@@ -8,7 +8,7 @@ namespace aspnet_get_started.Controllers
 {
     public class HomeController : Controller
     {
-        Public ActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }

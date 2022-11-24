@@ -33,6 +33,13 @@ jobs:
         with:
           name: ASP-app
           path: '/published/**'
+    
+  test:
+    runs-on: windows-latest
+    needs : test
+    environment:
+      name: 'test' 
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
   deploy:
     runs-on: windows-latest

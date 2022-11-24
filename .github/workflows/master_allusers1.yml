@@ -34,28 +34,6 @@ jobs:
           name: ASP-app
           path: '/published/**'
     
-  test:
-    runs-on: windows-latest
-    needs : test
-    environment:
-      name: 'test' 
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: ASP-app
-
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'testappallusers'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2E4B499664B7449D9977C4087B3BCCDF }}
-          package: .
-
   deploy:
     runs-on: windows-latest
     needs: build

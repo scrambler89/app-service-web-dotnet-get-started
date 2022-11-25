@@ -33,13 +33,7 @@ jobs:
         with:
           name: ASP-app
           path: '/published/**'
-    test:
-      - name: test 
-        runs-on: windows-latest
-        
-        steps:
-          - run: echo 'hello World'
-    
+
   deploy:
     runs-on: windows-latest
     needs: build
